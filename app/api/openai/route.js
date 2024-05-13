@@ -3,10 +3,7 @@ import path from "path";
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
 
-const dataFilePath = path.join(process.cwd(), "db.json");
-const jsonData = await fsPromises.readFile(dataFilePath);
-const { openAIKey } = JSON.parse(jsonData);
-const openai = new OpenAI({ apiKey: openAIKey });
+const openai = new OpenAI({ apiKey: process.env.OPEN_AI_KEY });
 
 export async function POST(req) {
   const { threadId, runId, method, action, role, content, assistantId } =
