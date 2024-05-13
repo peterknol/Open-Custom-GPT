@@ -19,6 +19,11 @@ export async function POST(req) {
   //   });
 
   switch (action) {
+    case "GET_LIST":
+      const list = await openai.beta.assistants.list();
+
+      return NextResponse.json(list.data);
+      return;
     case "retrieve":
       const getRun = await openai.beta.threads[method].retrieve(
         threadId,
