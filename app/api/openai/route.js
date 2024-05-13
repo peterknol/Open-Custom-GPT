@@ -23,7 +23,6 @@ export async function POST(req) {
       const list = await openai.beta.assistants.list();
 
       return NextResponse.json(list.data);
-      return;
     case "retrieve":
       const getRun = await openai.beta.threads[method].retrieve(
         threadId,
