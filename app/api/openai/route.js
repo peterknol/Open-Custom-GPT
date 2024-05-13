@@ -40,7 +40,7 @@ export async function POST(req) {
     case "create":
       switch (method) {
         case "threads":
-          const getThread = await openai.beta.threads[method].create();
+          const getThread = await openai.beta.threads.create();
           console.log("getThread", getThread);
           return NextResponse.json({
             ...getThread,
