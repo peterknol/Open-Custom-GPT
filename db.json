@@ -1,1 +1,18 @@
-{ "openAIKey": "", "assistants": {} }
+{
+    "openAIKey":"",
+    "assistants":{
+        "asst_Jy69DXYIkAR9ymoiKVXp10NX":{
+            "id":"asst_Jy69DXYIkAR9ymoiKVXp10NX",
+            "name":"UAV Bob",
+            "instructions":"Je bent een behulpzame adviseur met veel juridische kennis in civiele bouwprojecten. Je praat met een aannemer. Gebruik bij het beantwoorden zoveel mogelijk de bijgevoegde bestanden.",
+            "model":"gpt-3.5-turbo-1106",
+            "tools":[{
+                "type":"retrieval"
+            }],
+            "files":[{
+                "id":"file-8Pv6f7ruc5rz9EmyCP0IuNxz",
+                "name":"UAV.txt"
+            }]
+        }
+    }
+}
